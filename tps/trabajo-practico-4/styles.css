@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+  padding: 30px;
+  /* Separación amplia de los bordes externos de la pantalla */
+  background-color: #1a202c;
+  display: grid;
+  /* 2 columnas: 2/3 para section/article y 1/3 para aside */
+  grid-template-columns: 2fr 1fr;
+  /* 7 filas: las filas par (2 y 4) son espacios de separación libres */
+  grid-template-rows: 1fr
+  /* Fila 1: Header */
+  12px
+  /* Fila 2: Espacio libre */
+  0.8fr
+  /* Fila 3: Nav */
+  12px
+  /* Fila 4: Espacio libre */
+  2.5fr
+  /* Fila 5: Section + Aside */
+  2.5fr
+  /* Fila 6: Article + Aside */
+  1fr;
+  /* Fila 7: Footer */
+  /* Definición de la matriz 7x2 con grid-template-areas */
+  grid-template-areas: "cabecera  cabecera"     ".         ."     "navegacion navegacion"     ".         ."     "seccion   lateral"     "articulo  lateral"     "pie       pie";
+  gap: 0 12px;
+  /* Separación entre la columna izquierda y la derecha */
+}
+
+/* Asignación de áreas a cada clase */
+.bloque-header {
+  grid-area: cabecera;
+  background-color: #ffadad;
+}
+
+.bloque-nav {
+  grid-area: navegacion;
+  background-color: #ffd6a5;
+}
+
+.bloque-section {
+  grid-area: seccion;
+  background-color: #caffbf;
+}
+
+.bloque-article {
+  grid-area: articulo;
+  background-color: #9bf6ff;
+}
+
+.bloque-aside {
+  grid-area: lateral;
+  background-color: #a0c4ff;
+}
+
+.bloque-footer {
+  grid-area: pie;
+  background-color: #bdb2ff;
+}
+
+/* Bordes y alineación uniforme para todos los bloques */
+.bloque-header,  .bloque-nav,  .bloque-section,  .bloque-article,  .bloque-aside,  .bloque-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #0f172a;
+  /* Bordes del mismo tamaño */
+  border-radius: 6px;
+}
+
+/* Estilo para los links dentro de .items */
+.items a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #0f172a;
+}

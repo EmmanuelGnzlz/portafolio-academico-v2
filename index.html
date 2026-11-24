@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Trabajos prácticos de desarrollo web de Emmanuel González">
+    <title>Portafolio Académico | Emmanuel González</title>
+
+    <!-- Estilos e iconos -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Encabezado: nombre, enlaces y cambio de tema -->
+    <header class="header">
+      <nav class="navbar" aria-label="Navegación principal">
+        <div class="brand">
+          <img src="https://github.com/EmmanuelGnzlz.png" alt="Foto de perfil de Emmanuel González" class="profile-img">
+          <span>Emmanuel González</span>
+        </div>
+
+        <div class="nav-links">
+          <a href="https://github.com/EmmanuelGnzlz/portafolio-academico" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+          <a href="https://drive.google.com/drive/u/0/folders/1qz4npk7A2v4CURZFXsWLWlvi2gFZ5w-7" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-google-drive" aria-hidden="true"></i> Drive</a>
+          <button id="theme-button" type="button" aria-label="Activar modo oscuro" title="Cambiar tema">
+            <i class="fa-solid fa-moon" aria-hidden="true"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="container">
+      <section class="section welcome">
+        <p class="subtitle">MI ESPACIO DE APRENDIZAJE</p>
+        <h1>Bienvenido a mi Portafolio Académico</h1>
+        <p>Aquí organizo y presento mis trabajos prácticos y proyectos realizados durante la cursada.</p>
+        <a class="button button-main" href="#trabajos">Explorar trabajos <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+      </section>
+
+      <!-- Listado de trabajos: el buscador funciona con JavaScript -->
+      <section class="section" id="trabajos">
+        <div class="section-header">
+          <div>
+            <h2>Trabajos Prácticos</h2>
+            <p>Conocé los ejercicios de HTML y CSS realizados durante la cursada.</p>
+          </div>
+          <span class="project-count">5 trabajos</span>
+        </div>
+
+        <label class="search-label" for="search">Buscar un trabajo</label>
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          <input type="search" id="search" placeholder="Ej.: Flexbox, CSS, trabajo 3...">
+        </div>
+
+        <!-- Tarjetas organizadas con CSS Grid -->
+        <div class="grid-projects" id="project-list">
+          <!-- Trabajo práctico 1 -->
+          <article class="card" data-title="Trabajo Práctico 1" data-tags="html css">
+            <div class="card-top">
+              <span class="card-number">TP 01</span>
+              <i class="fa-regular fa-file-code" aria-hidden="true"></i>
+            </div>
+            <!-- Vista decorativa: solo HTML y CSS, sin imágenes externas -->
+            <div class="card-visual visual-1" aria-hidden="true">
+              <span class="visual-number">01</span>
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <h3>Trabajo Práctico 1</h3>
+            <p>Estructura básica en HTML5 y maquetación de tarjetas utilizando las propiedades del Modelo de Cajas de CSS.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span></div>
+            <a class="button button-card" href="tps/trabajo-practico-1/" target="_blank" rel="noopener noreferrer">
+              Ver trabajo <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </a>
+          </article>
+          <!-- Trabajo práctico 2 -->
+          <article class="card" data-title="Trabajo Práctico 2" data-tags="html css flexbox">
+            <div class="card-top">
+              <span class="card-number">TP 02</span>
+              <i class="fa-regular fa-file-code" aria-hidden="true"></i>
+            </div>
+            <!-- Vista decorativa: solo HTML y CSS, sin imágenes externas -->
+            <div class="card-visual visual-2" aria-hidden="true">
+              <span class="visual-number">02</span>
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <h3>Trabajo Práctico 2</h3>
+            <p>Réplica maquetada de la interfaz de React utilizando Flexbox para la alineación del navbar, buscador e imagen principal.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>Flexbox</span></div>
+            <a class="button button-card" href="tps/trabajo-practico-2/" target="_blank" rel="noopener noreferrer">
+              Ver trabajo <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </a>
+          </article>
+          <!-- Trabajo práctico 3 -->
+          <article class="card" data-title="Trabajo Práctico 3" data-tags="html css flexbox">
+            <div class="card-top">
+              <span class="card-number">TP 03</span>
+              <i class="fa-regular fa-file-code" aria-hidden="true"></i>
+            </div>
+            <!-- Vista decorativa: solo HTML y CSS, sin imágenes externas -->
+            <div class="card-visual visual-3" aria-hidden="true">
+              <span class="visual-number">03</span>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            <h3>Trabajo Práctico 3</h3>
+            <p>Maquetación de un catálogo e-commerce utilizando Flexbox, tarjetas interactivas con sombras, efectos hover y alineación dinámica de contenidos.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>Flexbox</span></div>
+            <a class="button button-card" href="tps/trabajo-practico-3/" target="_blank" rel="noopener noreferrer">
+              Ver trabajo <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </a>
+          </article>
+          <!-- Trabajo práctico 4 -->
+          <article class="card" data-title="Trabajo Práctico 4" data-tags="html css grid">
+            <div class="card-top">
+              <span class="card-number">TP 04</span>
+              <i class="fa-regular fa-file-code" aria-hidden="true"></i>
+            </div>
+            <!-- Vista decorativa: solo HTML y CSS, sin imágenes externas -->
+            <div class="card-visual visual-4" aria-hidden="true">
+              <span class="visual-number">04</span>
+              <i class="fa-solid fa-table-cells-large"></i>
+            </div>
+            <h3>Trabajo Práctico 4</h3>
+            <p>Maquetación de un layout web semántico utilizando CSS Grid (grid-template-areas) para la distribución y estructuración por áreas de contenido.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>Grid</span></div>
+            <a class="button button-card" href="tps/trabajo-practico-4/" target="_blank" rel="noopener noreferrer">
+              Ver trabajo <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </a>
+          </article>
+          <!-- Trabajo práctico 5 -->
+          <article class="card" data-title="Trabajo Práctico 5" data-tags="html css flexbox grid">
+            <div class="card-top">
+              <span class="card-number">TP 05</span>
+              <i class="fa-regular fa-file-code" aria-hidden="true"></i>
+            </div>
+            <!-- Vista decorativa: solo HTML y CSS, sin imágenes externas -->
+            <div class="card-visual visual-5" aria-hidden="true">
+              <span class="visual-number">05</span>
+              <i class="fa-solid fa-window-maximize"></i>
+            </div>
+            <h3>Trabajo Práctico 5</h3>
+            <p>Diseño de una landing page (Hero Section) combinando CSS Grid y Flexbox, con pseudo-clases avanzadas (:last-child) y resaltados tipográficos.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>Flexbox</span><span>Grid</span></div>
+            <a class="button button-card" href="tps/trabajo-practico-5/" target="_blank" rel="noopener noreferrer">
+              Ver trabajo <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </a>
+          </article>
+        </div>
+        <p id="empty-message" class="empty-message" hidden>No se encontraron trabajos con esa búsqueda.</p>
+      </section>
+    </main>
+
+    <footer class="footer">Portafolio académico · Emmanuel González</footer>
+  </body>
+</html>

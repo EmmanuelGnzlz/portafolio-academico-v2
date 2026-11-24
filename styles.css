@@ -1,0 +1,411 @@
+/* ============================================================
+   PORTAFOLIO ACADÉMICO - VERSIÓN MEJORADA
+   1. Colores y tema
+   2. Elementos generales
+   3. Encabezado
+   4. Bienvenida
+   5. Trabajos prácticos
+   6. Adaptación a celulares
+   ============================================================ */
+
+/* 1. Colores: cambiamos las variables para el tema oscuro. */
+:root {
+  --background: #f3f6fb;
+  --surface: #ffffff;
+  --text: #17243a;
+  --muted: #52627a;
+  --border: #dce4f0;
+  --primary: #087bb8;
+  --primary-hover: #056497;
+  --header: #1e2c44;
+  --card-shadow: rgba(21, 44, 81, 0.12);
+}
+
+html[data-theme="dark"] {
+  --background: #111b2b;
+  --surface: #1b2a3f;
+  --text: #f1f6ff;
+  --muted: #bac7db;
+  --border: #344761;
+  --primary: #38a8e5;
+  --primary-hover: #5cbcf0;
+  --header: #0c1625;
+  --card-shadow: rgba(0, 0, 0, 0.3);
+}
+
+/* 2. Estilos generales */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background: var(--background);
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input {
+  font: inherit;
+}
+
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 3px;
+}
+
+/* 3. Barra superior: Flexbox acomoda los elementos en una fila. */
+.header {
+  background: var(--header);
+  color: #ffffff;
+}
+
+.navbar {
+  max-width: 1120px;
+  margin: auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand, .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand {
+  font-weight: bold;
+}
+
+.profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #77ccff;
+}
+
+.nav-links a, #theme-button {
+  padding: 8px 11px;
+  border-radius: 8px;
+  background: #30435e;
+  color: #ffffff;
+}
+
+.nav-links a:hover, #theme-button:hover {
+  background: #405b80;
+}
+
+#theme-button {
+  cursor: pointer;
+  border: 0;
+  width: 40px;
+}
+
+/* 4. Contenido y bienvenida */
+.container {
+  max-width: 1060px;
+  padding: 30px 20px 50px;
+  margin: auto;
+}
+
+.section {
+  padding: 30px;
+  margin-bottom: 26px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  box-shadow: 0 5px 18px rgba(12, 24, 45, 0.04);
+}
+
+.welcome {
+  padding: 42px 34px;
+}
+
+.subtitle {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1.6px;
+  color: var(--primary);
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: clamp(26px, 4vw, 36px);
+  margin-bottom: 12px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.welcome > p:not(.subtitle), .section-header p {
+  color: var(--muted);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 7px;
+  background: var(--primary);
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.button:hover {
+  background: var(--primary-hover);
+}
+
+.button-main {
+  margin-top: 10px;
+}
+
+/* 5. Trabajos: Grid distribuye las tarjetas en columnas. */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.project-count {
+  white-space: nowrap;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 5px 12px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.search-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 7px;
+  font-size: 14px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 9px 13px;
+  margin-bottom: 24px;
+  color: var(--muted);
+}
+
+.search-box:focus-within {
+  border-color: var(--primary);
+}
+
+.search-box input {
+  background: transparent;
+  border: 0;
+  outline: 0;
+  width: 100%;
+  color: var(--text);
+}
+
+.search-box input::placeholder {
+  color: var(--muted);
+}
+
+.grid-projects {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  min-width: 0;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px var(--card-shadow);
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  color: var(--primary);
+}
+
+.card-number {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Imagen decorativa realizada solo con CSS e iconos.
+   Cada trabajo tiene un color diferente; no requiere JavaScript. */
+.card-visual {
+  height: 125px;
+  margin-bottom: 18px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #e1ebff, #cbdcff);
+  color: #3368bc;
+}
+
+.card-visual i {
+  font-size: 36px;
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.visual-number {
+  position: absolute;
+  right: 8px;
+  bottom: -32px;
+  font-size: 118px;
+  line-height: 1;
+  font-weight: bold;
+  opacity: 0.12;
+}
+
+.visual-2 {
+  background: linear-gradient(135deg, #d7f3ed, #c4e5f0);
+  color: #137d82;
+}
+
+.visual-3 {
+  background: linear-gradient(135deg, #eee1ff, #dedbfa);
+  color: #7553ac;
+}
+
+.visual-4 {
+  background: linear-gradient(135deg, #dcecff, #cceaf2);
+  color: #24779e;
+}
+
+.visual-5 {
+  background: linear-gradient(135deg, #ffe7d7, #f8dce7);
+  color: #ac5e67;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0 0 16px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: auto;
+  margin-bottom: 18px;
+}
+
+.tags span {
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 3px 8px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.button-card {
+  width: 100%;
+}
+
+.empty-message {
+  text-align: center;
+  padding: 25px 10px;
+  color: var(--muted);
+}
+
+.empty-message[hidden] {
+  display: none;
+}
+
+.footer {
+  text-align: center;
+  color: var(--muted);
+  padding: 0 20px 28px;
+  font-size: 13px;
+}
+
+/* 6. En pantallas pequeñas pasamos de 3 columnas a 2 y luego a 1. */
+@media (max-width: 800px) {
+  .grid-projects {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .navbar, .section-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+  }
+
+  .section {
+    padding: 22px;
+  }
+
+  .grid-projects {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .card { transition: none; }
+}
+
+/* JavaScript oculta las tarjetas que no coinciden. */
+.card[hidden] {
+  display: none;
+}

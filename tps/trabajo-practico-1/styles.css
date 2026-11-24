@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* Fondo con un tono neutro cálido/sobrio */
+  background-color: #D8DFE5;
+  font-family: Arial, sans-serif;
+  padding: 30px;
+}
+
+.section-1 {
+  width: 100%;
+}
+
+/* Estilos base de las tarjetas: ancho total, padding, margen y el mismo borde */
+.tarjeta {
+  width: 100%;
+  padding: 15px;
+  margin: 20px 0;
+  text-align: center;
+  border: 4px solid #333333;
+}
+
+/* Colores de fondo individuales para cada tarjeta */
+.tarjeta-1 {
+  background-color: #FF6B6B;
+}
+
+.tarjeta-2 {
+  background-color: #4ECDC4;
+}
+
+.tarjeta-3 {
+  background-color: #FFE66D;
+}

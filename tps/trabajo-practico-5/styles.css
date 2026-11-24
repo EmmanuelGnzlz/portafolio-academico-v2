@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+
+.container {
+  width: 70%;
+  height: 78dvh;
+  margin: 30px auto;
+  border-radius: 30px;
+  background-color: #eb7979;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "navbar  navbar"         "cuerpo1 cuerpo2";
+  overflow: hidden;
+}
+
+.navbar-container {
+  grid-area: navbar;
+  display: flex;
+  border-radius: auto 15px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #ffffff;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #111;
+}
+
+.logo i {
+  font-size: 1.3rem;
+  color: #000000;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.nav-links a:hover {
+  color: #e6b800;
+}
+
+.nav-links a:last-child {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px 25px;
+  border-radius: 6px;
+}
+
+.nav-links a:last-child:hover {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.cjp {
+  padding: 50px;
+  display: flex;
+  grid-area: cuerpo1;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cjp h1 {
+  font-size: 60px;
+  line-height: 0.90;
+  font-weight: 900;
+  color: #212529;
+}
+
+.resalt-lets {
+  display: inline-block;
+  background-color: #f8f9fa;
+  padding: 0 5px;
+}
+
+.resalt-unique {
+  display: inline-block;
+  background-color: #ffd60a;
+  padding: 0 5px;
+}
+
+.cjp p {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+
+.cjp button {
+  align-self: flex-start;
+  padding: 14px 25px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #212529;
+  color: #f8f9fa;
+}
+
+.caraB {
+  height: 100%;
+  width: 100%;
+  background-image: url(img/chica.png.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  grid-area: cuerpo2;
+}

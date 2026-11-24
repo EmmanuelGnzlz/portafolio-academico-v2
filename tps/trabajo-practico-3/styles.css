@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f4f6;
+  color: #333333;
+  min-height: 100vh;
+}
+
+.main-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  background-color: #ebe4cf;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 24px;
+  letter-spacing: 1.5px;
+  margin-bottom: 32px;
+}
+
+.products-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+  row-gap: 24px;
+}
+
+.product-card {
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 24px 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Color Tarjeta 1 (Turquesa) */
+.card-turquoise {
+  background-color: #55b3b1;
+  /* Fondo color turquesa */
+  color: #ffffff;
+  /* Texto blanco */
+}
+
+.card-turquoise .add-to-cart-btn {
+  background-color: #236869;
+  /* Color base del botón turquesa */
+}
+
+.card-turquoise .add-to-cart-btn:hover {
+  background-color: #184c4d;
+  /* Color del botón al pasar el cursor */
+}
+
+/* Color Tarjeta 2 (Azul Marino Oscuro) */
+.card-navy {
+  background-color: #1a2b4c;
+  /* Fondo azul marino */
+  color: #ffffff;
+  /* Texto blanco */
+}
+
+.card-navy .add-to-cart-btn {
+  background-color: #2c4373;
+  /* Color base del botón azul */
+}
+
+.card-navy .add-to-cart-btn:hover {
+  background-color: #1e3054;
+  /* Color del botón azul al pasar el cursor */
+}
+
+/* Color Tarjeta 3 (Negro / Gris Muy Oscuro) */
+.card-black {
+  background-color: #1a1a1a;
+  /* Fondo gris muy oscuro / negro */
+  color: #ffffff;
+  /* Texto blanco */
+}
+
+.card-black .add-to-cart-btn {
+  background-color: #333333;
+  /* Color base del botón oscuro */
+}
+
+.card-black .add-to-cart-btn:hover {
+  background-color: #4a4a4a;
+  /* Color del botón oscuro al pasar el cursor */
+}
+
+/* Color Tarjeta 4 (Gris Carbón / Grafito) */
+.card-charcoal {
+  background-color: #34495e;
+  /* Fondo gris carbón */
+  color: #ffffff;
+  /* Texto blanco */
+}
+
+.card-charcoal .add-to-cart-btn {
+  background-color: #1f2d3d;
+  /* Color base del botón carbón */
+}
+
+.card-charcoal .add-to-cart-btn:hover {
+  background-color: #141d27;
+  /* Color del botón carbón al pasar el cursor */
+}
+
+.card-image-container {
+  width: 100%;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.product-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.product-title {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.product-price {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.product-description {
+  font-size: 13px;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.add-to-cart-btn {
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 6px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
