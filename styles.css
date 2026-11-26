@@ -1,5 +1,5 @@
 /* ============================================================
-   PORTAFOLIO ACADÉMICO - VERSIÓN MEJORADA
+   PORTAFOLIO ACADÉMICO - VERSIÓN INTERMEDIA
    1. Colores y tema
    2. Elementos generales
    3. Encabezado
@@ -408,4 +408,31 @@ h2 {
 /* JavaScript oculta las tarjetas que no coinciden. */
 .card[hidden] {
   display: none;
+}
+
+/* 7. Apartado especial de innerHTML: mantiene el estilo de la V2. */
+.innerhtml-section h2 {
+  margin-bottom: 12px;
+}
+
+.innerhtml-section > p:not(.subtitle) {
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+
+.demo-result {
+  margin-top: 18px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--text);
+}
+
+.demo-result h3 {
+  margin-bottom: 10px;
+}
+
+.demo-result p + p {
+  margin-top: 8px;
 }

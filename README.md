@@ -79,3 +79,8 @@ La página está alojada mediante **GitHub Pages**, a partir de la rama `main` y
 
 **Emmanuel González**  
 [Perfil de GitHub](https://github.com/EmmanuelGnzlz)
+
+
+## Demostración de `innerHTML`
+
+La versión incorpora un apartado especial con el botón **Mostrar ejemplo**. Al presionarlo, JavaScript utiliza `innerHTML` para insertar un título y párrafos con etiquetas HTML dentro de `#demo-result`. Al volver a presionarlo, restaura el mensaje inicial. El contenido es fijo y no proviene de entradas del usuario.

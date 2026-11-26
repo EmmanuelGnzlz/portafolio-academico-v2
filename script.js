@@ -50,3 +50,26 @@ searchInput.addEventListener("input", function () {
 
   emptyMessage.hidden = visibleCards > 0;
 });
+
+// 3. Apartado especial: insertar contenido HTML desde JavaScript.
+// innerHTML interpreta etiquetas como <h3>, <p> y <strong>.
+const demoButton = document.getElementById("demo-button");
+const demoResult = document.getElementById("demo-result");
+let demoVisible = false;
+
+demoButton.addEventListener("click", function () {
+  demoVisible = !demoVisible;
+
+  if (demoVisible) {
+    // El contenido es fijo y está definido por el desarrollador.
+    demoResult.innerHTML = `
+      <h3>¡Contenido generado con JavaScript!</h3>
+      <p>Este texto no estaba escrito originalmente dentro del contenedor.</p>
+      <p>La propiedad <strong>innerHTML</strong> agregó un título, dos párrafos y una etiqueta de énfasis.</p>
+    `;
+    demoButton.textContent = "Restablecer ejemplo";
+  } else {
+    demoResult.innerHTML = "<p>Presioná el botón para generar contenido con <code>innerHTML</code>.</p>";
+    demoButton.textContent = "Mostrar ejemplo";
+  }
+});
