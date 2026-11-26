@@ -1,4 +1,4 @@
-// PORTAFOLIO ACADÉMICO - JAVASCRIPT BÁSICO
+// PORTAFOLIO ACADÉMICO - V2
 // 1. Alternar tema claro y oscuro.
 // 2. Buscar trabajos por título, descripción o tecnología.
 
